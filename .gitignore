@@ -1,0 +1,6 @@
+app_secrets.py
+__pycache__
+services/__pycache__
+templates
+resume.pdf
+resources
