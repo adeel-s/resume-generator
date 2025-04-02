@@ -10,4 +10,9 @@ prompt += "\nHere is the work experience:\n\n" + workExperience
 def writeBullets(keywords):
   global prompt
   prompt += "\nHere is the list of keywords:\n\n" + keywords
-  return LLM.generate(prompt)
+  bullets = LLM.generate(prompt)
+  print(bullets)
+  return parse(bullets)
+
+def parse(bullets):
+  return bullets.split('!@#$')

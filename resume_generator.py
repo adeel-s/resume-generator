@@ -1,8 +1,11 @@
-import services.keyword_analyzer as keywordAnalyzer
-import services.bullet_writer as bulletWriter
+import services.resume_writer as writer, services.MDtoPDF_converter as converter
 
-keywords = keywordAnalyzer.analyze()
+resumeTemplate = "templates\\resume.md"
+resumeOutput = "resume.pdf"
 
-bullets = bulletWriter.writeBullets(keywords)
+writer.writeResumeMD()
 
-print(bullets)
+converter.MDtoPDF(resumeTemplate, resumeOutput)
+
+
+
